@@ -1,15 +1,15 @@
 [[artifact]]
-location = "sun/crt1.o"
+location = "sun/x86_64/crt1.o"
 license = "CDDL-1.0"
 sha2 = "787f9111d8412f3112a4bf63740da6db8898b58ac009deadfe0c35c9e8c92e8d"
 
 [[artifact]]
-location = "sun/crti.o"
+location = "sun/x86_64/crti.o"
 license = "CDDL-1.0"
 sha2 = "97e368b0926cf079be01d160fffb67de3cd72b0525ff97f8841c3b9fcc4e63bf"
 
 [[artifact]]
-location = "sun/crtn.o"
+location = "sun/x86_64/crtn.o"
 license = "CDDL-1.0"
 sha2 = "b4e7fdc4afadcb92011abdfab24e5bc27f3e4f4d197bcd48bc0b4ddb55931038"
 
