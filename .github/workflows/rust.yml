@@ -17,4 +17,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Run selftest
-      run: cargo t selftest --verbose
+      working-directory: selftest
+      run: cargo test --verbose
