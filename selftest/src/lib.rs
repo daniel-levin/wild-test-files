@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 use rayon::prelude::*;
 use serde::Deserialize;
 use sha2::Digest;
@@ -65,7 +67,8 @@ impl Manifest {
     }
 }
 
-fn main() -> anyhow::Result<()> {
+#[test]
+fn selftest() -> anyhow::Result<()> {
     let manifest: Manifest = toml::from_slice(include_bytes!("../../Manifest.toml"))?;
 
     manifest.validate()
