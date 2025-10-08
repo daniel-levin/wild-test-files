@@ -1,29 +1,31 @@
 [[artifact]]
-location = "sun/crt1.o"
+# SunOS 5.11 omnios-r151054-6ad70ba62c i86pc illumos
+location = "sun/x86_64/crt1.o"
 license = "CDDL-1.0"
 sha2 = "787f9111d8412f3112a4bf63740da6db8898b58ac009deadfe0c35c9e8c92e8d"
 
 [[artifact]]
-location = "sun/crti.o"
+location = "sun/x86_64/crti.o"
 license = "CDDL-1.0"
 sha2 = "97e368b0926cf079be01d160fffb67de3cd72b0525ff97f8841c3b9fcc4e63bf"
 
 [[artifact]]
-location = "sun/crtn.o"
+location = "sun/x86_64/crtn.o"
 license = "CDDL-1.0"
 sha2 = "b4e7fdc4afadcb92011abdfab24e5bc27f3e4f4d197bcd48bc0b4ddb55931038"
 
 [[artifact]]
-location = "gnu/crt1.o"
+# Taken from Fedora 40 on x86_64
+location = "gnu/x86_64/crt1.o"
 license = "LGPL-2.1-or-later"
 sha2 = "73626ed6e3cff01861043f118f62569d71345611ced8cf6b7521c8556fedd29a"
 
 [[artifact]]
-location = "gnu/crti.o"
+location = "gnu/x86_64/crti.o"
 license = "LGPL-2.1-or-later"
 sha2 = "5dfd5f388dba89a2807f69ed4f5a4a5f6f3530476f0a76d893f2da3148de31c1"
 
 [[artifact]]
-location = "gnu/crtn.o"
+location = "gnu/x86_64/crtn.o"
 license = "LGPL-2.1-or-later"
 sha2 = "adc96b6f5653b1af8c655a3c0fd791e8a7cbd1e5f410d57328f075e46d2f055c"

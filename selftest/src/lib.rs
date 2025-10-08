@@ -1,3 +1,6 @@
+#![allow(dead_code)]
+
+use anyhow::Context;
 use rayon::prelude::*;
 use serde::Deserialize;
 use sha2::Digest;
@@ -18,7 +21,10 @@ struct Artifact {
 
 impl Artifact {
     fn validate(&self) -> anyhow::Result<()> {
-        let contents = std::fs::read(Path::new("../").join(&self.location))?;
+        let contents = std::fs::read(Path::new("../").join(&self.location)).context(format!(
+            "Expecting but cannot find artifact {:#?}",
+            self.location
+        ))?;
         let actual_sha2: [u8; 32] = sha2::Sha256::digest(&contents).into();
 
         if actual_sha2 != self.sha2 {
@@ -65,7 +71,8 @@ impl Manifest {
     }
 }
 
-fn main() -> anyhow::Result<()> {
+#[test]
+fn selftest() -> anyhow::Result<()> {
     let manifest: Manifest = toml::from_slice(include_bytes!("../../Manifest.toml"))?;
 
     manifest.validate()
